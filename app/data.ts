@@ -88,6 +88,7 @@ export async function updateContent(id: string, updates: ContentMutation): Promi
 
 
 export async function deleteContent(id: string): Promise<void> {
+  await delay();
   fakeContents.destroy(id);
 }
 
